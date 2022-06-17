@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            cursor: url("davide.png");
+            background-image: url("davide2.jpg");
+            background-repeat: repeat;
+            height: 100vh;
+        }
+
+        .container {
+            color: greenyellow;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+     <h1 class="blink">Alles Gueti Davide</h1>
+        <p class="blink">Hei Davide alles gueti</p>
+        <p class="blink">unser gschenkli fr dich isch on the way, below hessch schomol e chline teaser
+        </p>
+        <div>
+            <video width="320" height="240" controls>
+            <source src="gift.mp4" type="video/mp4">
+            eyy din brauser unterstütz s video nit so gay
+          </video>
+        </div>
+        <p class="blink">Liebi griessli</p>
+        <ul>
+            <li class="blink">Ben</li>
+            <li class="blink">William</li>
+            <li class="blink">Biri</li>
+            <li class="blink">Lena</li>
+            <li class="blink">Jascha Ritchie</li>
+        </ul>
+    </div>
+    <script>
+            let colours = ["#ff0000", "#ff00ff", "#00ff00", "#0000ff"]
+            window.setInterval(function(){
+                let blinkies = document.getElementsByClassName("blink")
+                for (let i = 0; i < blinkies.length; i++) {
+                    let blink = blinkies[i];
+                    blink.style.color = colours[Math.floor(Math.random()*blinkies.length)];
+                    console.log(blinkies[Math.floor(Math.random()*blinkies.length)])
+                }
+            }, 100);
+    </script>
+</body>
+</html>
