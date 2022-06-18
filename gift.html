@@ -5,9 +5,10 @@
     <style>
         body {
             cursor: url("davide.png");
-            background-image: url("davide2.jpg");
+            background: url("davide5.jpg");
             background-repeat: repeat;
             height: 100vh;
+            background-color: rgba(0,0,0,.5);
         }
 
         .container {
@@ -23,7 +24,7 @@
         
     </style>
 </head>
-<body>
+<body id="body">
     <div class="container">
      <h1 class="blink">Alles Gueti Davide</h1>
         <p class="blink">Hei Davide alles gueti</p>
@@ -45,15 +46,26 @@
         </ul>
     </div>
     <script>
-            let colours = ["#ff0000", "#ff00ff", "#00ff00", "#0000ff"]
+            let colours = ["#ff0000", "#ff00ff", "#00ff00", "#0000ff"];
+            let images = ["url('davide.png')", "url('davide2.jpg')", "url('davide3.jepg')", "url('davide4.jpg')", "url('davide5.jpg')", "url('davide6.jpg')"];
             window.setInterval(function(){
-                let blinkies = document.getElementsByClassName("blink")
+                let blinkies = document.getElementsByClassName("blink");
+                let body = document.getElementById("body");
+                body.style.backgroundImage = images[Math.floor(Math.random()*images.length)];
                 for (let i = 0; i < blinkies.length; i++) {
                     let blink = blinkies[i];
-                    blink.style.color = colours[Math.floor(Math.random()*blinkies.length)];
+                    blink.style.color = colours[Math.floor(Math.random()*colours.length)];
                     console.log(blinkies[Math.floor(Math.random()*blinkies.length)])
                 }
             }, 100);
+            window.setInterval(function(){
+                alert("muesch uf video klicke");
+            }, 4000);
+            
+            document.addEventListener('DOMContentLoaded', (event) => {
+                    setTimeout(function() {alert("okay vlt gfallt dir die website bessr"); window.location.href = ("https://www.youtube.com/watch?v=6pDHXNinnMo"); }, 16000);
+                })
+            
     </script>
 </body>
 </html>
